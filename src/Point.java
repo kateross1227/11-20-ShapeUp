@@ -1,4 +1,3 @@
-// A Point object represents a pair of (x, y) coordinates.
 // A Point object represents a pair of (x, y) integer coordinates.
 // Reference Building Java Programs pp 505-517
 
@@ -26,7 +25,7 @@ public class Point {
     return y;
   }
   
-  public double DistanceFromOrigin() {
+  public double distanceFromOrigin() {
     double d = Math.sqrt((x * x) + (y * y));
     return d;
   }
