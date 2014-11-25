@@ -1,5 +1,4 @@
 // A Circle object represents a circle defined by a center point and a radius.
-// A Circle object represents a circle defined by a center point and a radius.
 public class Circle {
   Point center;
   double radius;
@@ -24,11 +23,11 @@ public class Circle {
   }
   
   public double area() {
-    return (double)(3.14 * (radius * radius));
+    return (double)(Math.PI * (radius * radius));
   }
   
-  public double circumfrence() {
-    return (double)(2 * radius * 3.14);
+  public double circumference() {
+    return (double)(2 * Math.PI * radius);
   }
   
   public double diameter() {
@@ -40,8 +39,7 @@ public class Circle {
   }
   
   public void translate(int x, int y) {
-    center.x += x;
-    center.y += y;
+    center.translate(x, y);
   }
   
   public void changeRadius(double x) {
