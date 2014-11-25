@@ -1,5 +1,4 @@
 // A Rectangle object represents a rectangle defined by an origin point (bottom left corner), plus width and height.
-// A Rectangle object represents a rectangle defined by an origin point (bottom left corner), plus width and height.
 import java.util.*;
 
 public class Rectangle {
@@ -15,7 +14,7 @@ public class Rectangle {
   
   public Rectangle(Point a, Point b) {
     origin = a;
-    width = b.x - a.y;
+    width = b.x - a.x;
     height = b.y - a.y;
   }
   
@@ -30,10 +29,7 @@ public class Rectangle {
   }
   
   public Point getTopRight() {
-    Point TopRight = new Point();
-    TopRight.x = origin.x + width;
-    TopRight.y = origin.y + height;
-    return TopRight;
+    return new Point(origin.x + width, origin.y + height);
   }
   
   public int getHeight() {
@@ -57,11 +53,7 @@ public class Rectangle {
   }
   
   public boolean isSquare() {
-    boolean Square = false;
-    if (width == height) {
-      Square = true;
-    }
-    return Square;
+    return (width == height);
   }
   
   public String toString() {
@@ -69,8 +61,7 @@ public class Rectangle {
   }
   
   public void translate(int x, int y) {
-    origin.x += x;
-    origin.y += y;
+    origin.translate(x, y);
   }
   
   public void scale(int dx, int dy) {
