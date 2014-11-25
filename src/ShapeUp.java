@@ -11,7 +11,7 @@ public class ShapeUp {
         p2.setX(8);
         p2.setY(8);
 
- /*       // print each point and its distance from origin
+        // print each point and its distance from origin
         System.out.println("p1 is " + p1.toString());
         System.out.println("p1 distance from origin = " + p1.distanceFromOrigin());
 
@@ -20,7 +20,7 @@ public class ShapeUp {
          
         // print the distance between the two points
         System.out.println("distance between p1 & p2 = " + p1.distance(p2));
-*/
+
         // create a line
         System.out.println("----------------------------------------------");
         Line line = new Line(p1, p2);
